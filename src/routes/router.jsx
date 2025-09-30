@@ -18,7 +18,7 @@ import UpdateService from '../components/dashboard/UpdateService';
 import Contact from '../pages/Contact';
 import ServiceDetails from '../pages/ServiceDetails';
 import CartPage from '../pages/ShowAllCart';
-import OrdersPage from '../pages/OrdersPage';
+import Orders from '../components/dashboard/Orders';
 
 const router = createBrowserRouter([
   {
@@ -89,7 +89,7 @@ const router = createBrowserRouter([
       },
       {
         path:'ordered/',
-        element:<OrdersPage/>
+        element:<Orders/>
       },
       {
         path: "showservices",

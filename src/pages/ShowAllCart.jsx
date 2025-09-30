@@ -37,18 +37,16 @@ const CartPage=() =>{
     it.subtotal ?? (Number(it?.service?.price ?? 0) * Number(it.quantity ?? 0));
 
   let total = items.reduce((sum, it) => sum + getSubtotal(it), 0);
-
+  // console.log("Cart items:", items, "Total:", typeof( total), total );
   if (loading) return <p>Loading cart…</p>;
   if (!items.length) return <p>Your cart is empty.</p>;
 
 const handleOrderNow = (item) => {
-    console.log("Order placed for item:", item);
-    const payload = { service_title: item.service.title,unit_price:getSubtotal(item), quantity: item.quantity,subtotal:getSubtotal(item).toFixed(2) }
     alert(`Order placed for ${item.service?.title || "service"} (Qty: ${item.quantity})`);
     // Here you would typically call an API to process the order
     try{
-        authApiClient.post("orders/", {total_amount:total, items:[payload]}) // POST /api/orders/;
-        console.log("Order API called with:", {total_amount:total, items:[payload]});
+        authApiClient.post("orders/", {}) // POST /api/orders/;
+        console.log("Order API called with:", {items:[payload]});
         alert("Order successfully placed!");
         // After ordering, you might want to remove the item from the cart
         removeItem(item.id);
