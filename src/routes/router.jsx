@@ -7,7 +7,6 @@ import BlogDetails from '../components/home/BlogDetails';
 import Services from '../pages/Services';
 import Shop from '../pages/Shop';
 import Team from '../pages/Team';
-import AuthLayout from '../layout/AuthLayout';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import DashboardLayout from '../layout/DashboardLayout';
@@ -17,6 +16,9 @@ import Profile from '../pages/Profile';
 import ShowContacts from '../components/dashboard/ShowContacts';
 import UpdateService from '../components/dashboard/UpdateService';
 import Contact from '../pages/Contact';
+import ServiceDetails from '../pages/ServiceDetails';
+import CartPage from '../pages/ShowAllCart';
+import OrdersPage from '../pages/OrdersPage';
 
 const router = createBrowserRouter([
   {
@@ -77,6 +79,17 @@ const router = createBrowserRouter([
       {
         path: "service/:id/edit",
         element: <UpdateService />,
+      },
+      {
+        path: "service/:id",
+        element:<ServiceDetails/>,
+      },{
+        path:'checkout/',
+        element:<CartPage/>
+      },
+      {
+        path:'ordered/',
+        element:<OrdersPage/>
       },
       {
         path: "showservices",

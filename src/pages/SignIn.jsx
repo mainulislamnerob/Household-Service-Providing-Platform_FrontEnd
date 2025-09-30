@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import useAuthContext from "../hook/useAuthContext";
+import authApiClient from "../services/auth-api-client";
 
 const SignIn = () => {
   const { loginUser } = useAuthContext();
@@ -15,10 +16,20 @@ const SignIn = () => {
     formState: { errors },
   } = useForm();
 
+  const cartGenerate = () => {
+    try{
+      const res = authApiClient("cart/") // POST /api/cart/
+      console.log(res)
+    }catch(err){
+      console.log(err)
+    }
+  }
   const onSubmit = async (data) => {
     setLoading(true);
     try {
       await loginUser(data);
+      //generate cart every user login
+      cartGenerate()
       // when user login successful navigate this url
       navigate("/dashboard");
     } catch (err) {

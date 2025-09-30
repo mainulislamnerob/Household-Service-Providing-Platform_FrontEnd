@@ -48,7 +48,7 @@ const Services = () => {
 
             <div className="card-actions justify-between mt-4">
               {/* Buy Button */}
-              <button className="btn btn-primary">Add To Cart</button>
+              <Link to={`/dashboard/service/${service.id}`}><button className="btn btn-primary">Service Details</button></Link>
 
               {/* Edit Button */}
               <Link

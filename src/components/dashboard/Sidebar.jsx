@@ -42,6 +42,12 @@ const Sidebar = () => {
                 <NavLink to="cart/">cart</NavLink>
               </li>
               <li>
+                <NavLink to="checkout/">checkout</NavLink>
+              </li>
+              <li>
+                <NavLink to="ordered/">Ordered</NavLink>
+              </li>
+              <li>
                 <NavLink to="addservice/">Add services</NavLink>
               </li>
               <li>
