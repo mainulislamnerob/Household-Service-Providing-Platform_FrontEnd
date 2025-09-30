@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { use } from 'react';
 import { NavLink } from 'react-router-dom';
+import useAuthContext from '../../hook/useAuthContext';
 
 const Sidebar = () => {
+  const {user}=useAuthContext()
     return (
       <div>
         <div className="drawer">
@@ -26,9 +28,12 @@ const Sidebar = () => {
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li>
+              {
+                !user.is_staff&&<li>
                 <NavLink to="addservice/">Add services</NavLink>
               </li>
+              }
+              
               <li>
                 <NavLink to="showservices/">Showservices</NavLink>
               </li>

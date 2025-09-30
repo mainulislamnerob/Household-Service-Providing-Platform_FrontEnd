@@ -31,7 +31,7 @@ const SignIn = () => {
       //generate cart every user login
       cartGenerate()
       // when user login successful navigate this url
-      navigate("/dashboard");
+      navigate("/");
     } catch (err) {
       console.log("Login faild", err);
     } finally {

@@ -96,6 +96,19 @@ const Navbar = () => {
                 Team
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="dashboard/"
+                className={({ isActive }) =>
+                  `px-4 py-2 border rounded-md transition-all duration-300 ${isActive
+                    ? "text-red-600 border-red-600"
+                    : "text-base-700 border-transparent"
+                  }`
+                }
+              >
+                Dashboard
+              </NavLink>
+            </li>
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">HouseHould Service Provideing</a>
@@ -167,6 +180,19 @@ const Navbar = () => {
               Team
             </NavLink>
           </li>
+          <li>
+              <NavLink
+                to="dashboard/"
+                className={({ isActive }) =>
+                  `px-4 py-2 border rounded-md transition-all duration-300 ${isActive
+                    ? "text-red-600 border-red-600"
+                    : "text-base-700 border-transparent"
+                  }`
+                }
+              >
+                Dashboard
+              </NavLink>
+            </li>
         </ul>
       </div>
       <div className="navbar-end">

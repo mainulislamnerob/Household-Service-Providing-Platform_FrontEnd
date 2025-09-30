@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import ProfileForm from "../components/dashboard/profile/ProfileForm";
 import ProfileButton from "../components/dashboard/profile/ProfileButton";
 import PasswordChangeForm from "../components/dashboard/profile/PasswordChangeForm";
+import useAuthContext from "../hook/useAuthContext";
 
 
 const Profile = () => {

@@ -112,6 +112,7 @@ const useAuth = () => {
     setAuthTokens(null);
     setUser(null);
     localStorage.removeItem("authTokens");
+    window.location.href = "login/";
   };
 
   return {
