@@ -19,6 +19,7 @@ import Contact from '../pages/Contact';
 import ServiceDetails from '../pages/ServiceDetails';
 import CartPage from '../pages/ShowAllCart';
 import Orders from '../components/dashboard/Orders';
+import PrivateRoute from './PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -66,7 +67,7 @@ const router = createBrowserRouter([
   
   {
     path: "dashboard/",
-    element: <DashboardLayout />,
+  element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
     children: [
       {
         path: "dashboard/",

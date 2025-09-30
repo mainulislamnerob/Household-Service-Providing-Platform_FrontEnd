@@ -47,15 +47,6 @@ const Sidebar = () => {
               <li>
                 <NavLink to="ordered/">Ordered</NavLink>
               </li>
-              <li>
-                <NavLink to="addservice/">Add services</NavLink>
-              </li>
-              <li>
-                <NavLink to="addservice/">Add services</NavLink>
-              </li>
-              <li>
-                <NavLink to="addservice/">Add services</NavLink>
-              </li>
             </ul>
           </div>
         </div>
